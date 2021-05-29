@@ -1,5 +1,6 @@
 # XMLHttpRequest
 
+```javascript
 // function to handle success
 function success() {
     var data = JSON.parse(this.responseText); //parse the string to JSON
@@ -16,18 +17,22 @@ xhr.onload = success; // call success function if request is successful
 xhr.onerror = error;  // call error function if request failed
 xhr.open('GET', 'https://api.github.com/users/manishmshiva'); // open a GET request
 xhr.send(); // send the request to the server.
+```
 
 # Fetch API Get
 
+```javascript
 // GET Request.
 fetch('https://api.github.com/users/manishmshiva')
     // Handle success
     .then(response => response.json())  // convert to json
     .then(json => console.log(json))    //print data to console
     .catch(err => console.log('Request Failed', err)); // Catch errors
+  ```
     
 # Fetch Api post
 
+```javascript
 // data to be sent to the POST request
 let _data = {
   title: "foo",
@@ -43,5 +48,5 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 .then(response => response.json()) 
 .then(json => console.log(json));
 .catch(err => console.log(err));
-
+```
 
